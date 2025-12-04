@@ -21,9 +21,19 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # 2. データ読み込み
 # =========================
 print("Loading data...")
-train_raw = pd.read_csv(TRAIN_PATH)
+
+train_raw = pd.read_csv(
+    TRAIN_PATH,
+    encoding="utf-8",
+    encoding_errors="ignore"
+)
 print("Original train size:", len(train_raw))
-test = pd.read_csv(TEST_PATH, encoding="latin1")
+test = pd.read_csv(
+    TEST_PATH,
+    encoding="utf-8",
+    encoding_errors="ignore"
+)
+print("Original test size:", len(test))
 
 train = train_raw.copy()
 

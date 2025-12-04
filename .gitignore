@@ -9,6 +9,4 @@ venv/
 # Data & models
 data/raw/
 data/processed/
-models/
-outputs/logs/
 outputs/submissions/*.csv
